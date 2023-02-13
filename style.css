@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #12222d;
+    height: 1000px;
+}
+.wrapper{
+    position: relative;
+    transition: 0.5s;
+    left: 0;
+}
+.wrapper.active{
+    left: -400px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+header.sticky{
+    padding: 20px 100px;
+    background: #162c3b;
+}
+header .logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+header .toggle{
+    position: relative;
+    width: 36px;
+    height: 28px;
+    background: url(images/toggle.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+header .toggle.active{
+    background: url(images/close.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3475ca;
+
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+.banner .content{
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 60px;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 18px;
+    color: #fff;
+}
+.sidebar{
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #12222d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.5s;
+}
+.sidebar.active{
+    right: 0;
+}
+.sidebar ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar ul li{
+    list-style: none;
+    margin: 5px 0;
+}
+.sidebar ul li a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.sidebar ul li a:hover{
+    color: #3475ca;
+}  
+.about{
+    position: relative;
+    width: 100%;
+    background: #162c3b;
+    display: flex;
+}
+.about .contentBx{
+    background: #162c3b;
+    padding: 100px;
+    width: 50%;
+}
+.heading{
+    position: relative;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.text{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.about .imgBx{
+    position: relative;
+    width: 50%;
+    background: url(images/about.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.services{
+    position: relative;
+    background: #12222d;
+    text-align: center;
+    padding: 100px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.container .serviceBx{
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.technologies{
+    position: relative;
+    background: #3475ca;
+    width: 100%;
+    padding: 100px;
+    padding-top: 300px;
+    margin-top: -300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.technologies .contentBx{
+    position: relative;
+    max-width: 800px;
+
+}
+.technologies .imgBx{
+    position: relative;
+    max-width: 550px;
+    left: -240px;
+}
+.client{
+    position: relative;
+    padding-top: 100px;
+    background: #162c3b;
+    text-align: center;
+}
+.client .imgBx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+}
+.client .imgBx img{
+    display: inline-block;
+    position: relative;
+    max-width: 100px;
+    margin: 20px;
+    opacity: 0.25;
+    cursor: pointer;
+}
+.client .imgBx img:hover{
+    opacity: 1;
+}
+.testimonial{
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+}
+.testimonial .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+.testimonial .container .contentBx{
+    position: relative;
+    background: #fff;
+    padding: 60px, 50px;
+    margin: 10px;
+    width: 540px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial .container .contentBx p{
+    padding: 20px 20px 20px 20px;
+    font-style: italic;
+}
+.testimonial .container .contentBx h3{
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    text-align: right;
+    font-weight: 500;
+    color: #3f8ffc;
+}
+.team{
+    position: relative;
+    padding: 0px 100px 100px;
+    text-align: center;
+}
+.team .container{
+    margin-top: 30px;
+}
+.team .teamBox{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+.team .teamBox .box{
+    margin: 0;
+    width: 260px;
+    padding: 5px;
+    background-color: #fff;
+}
+.team .container .teamBox .box .imgBx{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.team .container .teamBox .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
+.team .teamBox .box .content{
+    padding: 15px 0;
+}
+.team .teamBox .box .content h2{
+    position: relative;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+.team .teamBox .box .content h2 span{
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+}
+.contact{
+    position: relative;
+    padding: 100px;
+    text-align: center;
+    background: #162c3b;
+}
+.about .imgBx2{
+    position: relative;
+    width: 50%;
+    background: url(images/s.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.red{
+    background: url(images/red.jpg) !important;
+    background-size: cover;
+    background-position: center;
+}
+.form{
+    position: relative;
+}
+.form .inputBox{
+    margin-bottom: 40px;
+
+}
+.form .inputBox input{
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.form .inputBox input::placeholder, 
+.form .inputBox textarea::placeholder{
+    color: #fff;
+}
+.form .inputBox textarea{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    min-height: 150px;
+    border-bottom: 2px solid #fff;
+}
+.form .inputBox input[type="submit"]{
+    width: 150px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    font-weight: 400;
+}
+.footer{
+    position: relative;
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+
+}
+.footer ul li a img{
+    max-width: 20px;
+    /* filter: invert(1); turns black to white*/
+}
