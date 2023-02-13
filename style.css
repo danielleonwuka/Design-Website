@@ -209,7 +209,6 @@ header .toggle.active{
     align-items: center;
     flex-wrap: wrap;
     margin-top: 40px;
-
 }
 .client .imgBx img{
     display: inline-block;
